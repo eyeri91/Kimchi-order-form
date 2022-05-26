@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimchi order form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="order-form-header">
+        <p class="brand">My Kimchi Is Better Than Yours</p>
+        <h1>Kimch Ordering Form</h1>
+        <p><em>Want to taste our world best kimch? <strong>Order now!</strong></em></p>
+    </header>
+    <form action="#" method="get" class="order-form">
+        <div class="form-row">
+            <label for="fname">First name : </label>
+            <input type="text" id="fname" name="fname" required autofocus>
+            <span class="mandatory"></span>
+        </div>
+        <div class="form-row">
+            <label for="lname">Last name : </label>
+            <input type="text" id="lname" name="lname" required>
+            <span class="mandatory"></span>
+        </div>
+        <div class="form-row">
+            <label for="email">Email : </label>
+            <input type="email" id="email" name="email" required placeholder="kimchi@hello.com">
+            <span class="format"></span>
+        </div>
+        <div class="form-row">
+            <label for="phone">Phone : </label>
+            <input type="tel" id="phone" name="phone" required placeholder="xxx-xxx-xxxx"
+                pattern="[0-9]{10}|[0-9]{3}[-. ][0-9]{3}[-. ][0-9]{4}">
+            <span class="mandatory format"></span>
+        </div>
+        <div class="form-row">
+            <div class="modal-container">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>whatever kimchi explanatiosns</p>
+                </div>
+            </div>
+            <label for="kimchi">
+                <button type="button" class="modal-btn-screen">?</button>
+                Type of Kimchi :
+                <button type="button" class="modal-btn">?</button>
+            </label>
+            <input type="text" id="kimchi" name="kimchi" list="kimchi-li" autocomplete="off"
+                pattern="[Cc]abbage|[Rr]adishi|[Cc]ucumber|[Vv]egan|[Dd]ongchimi(white)">
+            <span class="mandatory"></span>
+            <datalist id="kimchi-li">
+                <option>Cabbage</option>
+                <option>Radish</option>
+                <option>Cucumber</option>
+                <option>Vegan</option>
+                <option>Dongchimi</option>
+            </datalist>
+        </div>
+        <fieldset class="radio-form-row">
+            <legend>Choose the size :</legend>
+            <input type="radio" id="sm" name="size" value="1kg">
+            <label for="sm">1kg</label>
+            <input type="radio" id="md" name="size" value="3kg" checked>
+            <label for="md">3kg</label>
+            <input type="radio" id="lg" name="size" value="5kg">
+            <label for="lg">5kg</label>
+        </fieldset>
+        <div class="form-row">
+            <label for="subscribe">
+                <input type="checkbox" id="subscribe" name="subscribe" checked>
+                *I agree to receive emails about promotions from MKBY.
+            </label>
+        </div>
+        <button class="submit">Place an order!</button>
+    </form>
+</body>
+
+</html>
