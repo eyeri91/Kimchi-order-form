@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     color: #bb3333;
     font-family: 'Roboto', sans-serif;
     ;
@@ -141,10 +141,28 @@ input[type="tel"]:focus {
 }
 
 .modal-container {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3)
+        /* display: none; */
 }
 
-.modal-btn {
+.modal-content {
+    background-color: #fff;
+}
+
+.close {
+    border-style: none;
+    background-color: #af3131;
+    color: #fcefca;
+    padding: 1px 4px;
+    border-radius: 50%;
+}
+
+.info-btn {
     background-color: #af3131;
     color: #fbefe0;
     border: none;
@@ -153,7 +171,7 @@ input[type="tel"]:focus {
     vertical-align: 1px;
 }
 
-.modal-btn-screen {
+.info-btn-screen {
     display: none;
 }
 
@@ -239,11 +257,11 @@ button:focus {
         margin-left: 3px;
     }
 
-    .modal-btn {
+    .info-btn {
         display: none;
     }
 
-    .modal-btn-screen {
+    .info-btn-screen {
         display: inline;
         background-color: #af3131;
         color: #fbefe0;
