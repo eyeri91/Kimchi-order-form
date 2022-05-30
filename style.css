@@ -154,6 +154,11 @@ input[type="tel"]:focus {
     pointer-events: none;
 }
 
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
 .modal-content {
     padding: 15px 25px;
     height: 200px;
@@ -187,6 +192,7 @@ input[type="tel"]:focus {
     border-radius: 50%;
     margin-top: -0.8rem;
     margin-right: -0.8rem;
+    cursor: pointer;
 }
 
 .info-btn {
@@ -198,23 +204,15 @@ input[type="tel"]:focus {
     vertical-align: 1px;
 }
 
+.info-btn:hover {
+    cursor: pointer;
+    background-color: rgb(221, 139, 139);
+}
+
 .p-title {
     margin-bottom: 15px;
 }
 
-.info-btn-screen {
-    display: none;
-}
-
-/* input[type="email"]:valid,
-input[type="tel"]:valid {
-    background: url(/kimchi-order-form/valid.jpg);
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-}
-
-*/
 /* 
 .info {
     text-decoration: none;
@@ -226,8 +224,8 @@ input[type="tel"]:valid {
     margin-left: 2px;
 } */
 
-button:hover,
-button:focus {
+.submit:hover,
+.submit:focus {
     background-color: rgb(251, 119, 102);
     cursor: pointer;
 }
@@ -286,20 +284,6 @@ button:focus {
         font-style: bold;
         color: #af3131;
         margin-left: 3px;
-    }
-
-    .info-btn {
-        display: none;
-    }
-
-    .info-btn-screen {
-        display: inline;
-        background-color: #af3131;
-        color: #fbefe0;
-        border: none;
-        border-radius: 50%;
-        padding: 1px 4px;
-        vertical-align: 1px;
     }
 
     label[for="subscribe"] {
